@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <title>Cleanic Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;" class="heading">Cleanic</h1>
+        <div class="login-container">
+            <div class="login-box" id="user-login-box">
+                <h3>User Login</h3>
+                <form action="user_login.php" method="post" onsubmit="return validateUserLogin()">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <div class="login-box" id="volunteer-login-box">
+                <h3>Volunteer Login</h3>
+                <form action="volunteer_login.php" method="post" onsubmit="return validateVolunteerLogin()">
+                    <label for="volunteer-username">Username:</label>
+                    <input type="text" id="volunteer-username" name="volunteer-username" required>
+
+                    <label for="volunteer-password">Password:</label>
+                    <input type="password" id="volunteer-password" name="volunteer-password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <button type="sign-up-button" style="background-color:#31391c;" class="signup">signup</button>
+    </div>
+
+    <script>
+        function validateUserLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            const valid = [
+                { name: "sri", pwd: "123" },
+                { name: "manojna", pwd: "123" },
+                { name: "sasi", pwd: "123" },
+                { name: "reshma", pwd: "123" },
+                { name: "lavanya", pwd: "123" },
+            ];
+
+            // Basic client-side validation
+            if (username === "" || password === "") {
+                alert("Please fill in all fields for User Login");
+                return false;
+            }
+
+            // Simulate server-side check (replace with actual server-side validation)
+            if (! valid.find(function(user){
+                return (user.name==username && user.pwd==password);
+            })) {
+                alert("Invalid username or password for User Login");
+                return false;
+            }
+
+            alert("User Login successful!"); // Remove this line in the final implementation
+            // Redirect to Google after successful login
+            // Add this code after the successful login alert in both validateUserLogin and validateVolunteerLogin functions
+
+            sessionStorage.setItem('loggedInUser', username);
+
+            window.open("homepage.html", "_blank");
+            return true;
+        }
+
+        function validateVolunteerLogin() {
+            var volunteerUsername = document.getElementById('volunteer-username').value;
+            var volunteerPassword = document.getElementById('volunteer-password').value;
+            const valid = [
+                { name: "sri", pwd: "123" },
+                { name: "manojna", pwd: "123" },
+                { name: "sasi", pwd: "123" },
+                { name: "reshma", pwd: "123" },
+                { name: "lavanya", pwd: "123" },
+            ];
+
+            // Basic client-side validation
+            if (volunteerUsername === "" || volunteerPassword === "") {
+                alert("Please fill in all fields for Volunteer Login");
+                return false;
+            }
+
+            // Simulate server-side check (replace with actual server-side validation)
+            if (!valid.find(function (volunteer) {
+                return volunteer.name == volunteerUsername && volunteer.pwd == volunteerPassword;
+            })) {
+                alert("Invalid username or password for Volunteer Login");
+                return false;
+            }
+
+            alert("Volunteer Login successful!");
+            // window.open("https://www.google.com", "_blank");
+
+            // sessionStorage.setItem('loggedInUser', username);
+
+            window.open("volhomepage.html", "_blank");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

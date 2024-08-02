@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="volprofile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" />
+    <style>
+    
+        .navbar-logo {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        .navbar-logo img {
+            width: 100%;
+            height: auto;
+        }
+        
+
+        nav a {
+            margin-left: 30px;
+        }
+        </style>
+</head>
+<body>
+    <nav>
+        <a href="homepage.html" class="navbar-logo">
+            <img src="home_icon.jpeg" alt="Logo">
+        </a>
+        <a href="volhomepage.html"><i class="fas fa-home"></i> Home</a>
+        <a href="volreq.html"><i class="fas fa-envelope"></i> Requests</a>
+        <a href="volprogress.html"><i class="fas fa-tasks"></i> progress</a>
+        <a href="#profile"><i class="fas fa-user"></i> profile</a>
+        <a href="loginpage.html">logout</a>
+    
+    </nav>
+<div class="profile-container">
+    <div id="profile">
+        <img class="profile-picture" src="person.jpeg" alt="Profile Picture">
+    <div class="user-details">
+        <p><strong>Name:</strong> Raju</p>
+        <p><strong>Muncipality:</strong> Bhimavaram</p>
+        <p><strong>Phone:</strong> 7564637282</p>
+        <p><strong>Email:</strong> raju@gmail.com</p>
+    </div>
+    <button class="edit-button" onclick="openEditForm()">Edit Profile</button>
+
+    <div class="form-container" id="editForm">
+        <label class="form-label" for="name">Name:</label>
+        <input type="text" id="name" class="form-input" placeholder="Enter your name">
+
+        <label class="form-label" for="muncipality">Address:</label>
+        <input type="text" id="muncipality" class="form-input" placeholder="Enter your address">
+
+        <label class="form-label" for="phone">Phone:</label>
+        <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number">
+
+        <label class="form-label" for="email">Email:</label>
+        <input type="email" id="email" class="form-input" placeholder="Enter your email address">
+
+        <button class="save-button" onclick="saveProfile()">Save Profile</button>
+    </div>
+    </div>
+    
+</div>
+
+<script>
+    function openEditForm() {
+        document.getElementById('editForm').style.display = 'block';
+    }
+
+    function saveProfile() {
+        var name = document.getElementById('name').value;
+        var address = document.getElementById('muncipality').value;
+        var phone = document.getElementById('phone').value;
+        var email = document.getElementById('email').value;
+
+        // Add logic to update the profile details (e.g., send data to a server)
+        console.log('Profile updated:', { name, address, phone, email });
+
+        // Close the form
+        document.getElementById('editForm').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

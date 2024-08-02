@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f0f0f0;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f0f0;
+  }
+  nav {
+    background-color:rgb(16, 49, 16);
+    padding: 20px;
+    text-align: right;
+    overflow: hidden;
+    height: auto;
+    width: 100%; 
+    position: fixed;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 100;
+    box-sizing : border-box;
+  }
+
+  nav a {
+    color: rgb(228, 211, 211);
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 18px;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    color: greenyellow;
+    color: black;
+  }
+  
+  .progress-container {
+    text-align: center;
+    margin: 20px;
+    align-content: center;
+  }
+  
+  .progress-heading {
+    color: #fff;
+    text-align:center;
+    margin-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:50px;
+  }
+  
+  .progress-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #a4beac;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center; /* Center the form content */
+  }
+  
+  .progress-item {
+    margin-bottom: 15px;
+  }
+  
+  .worker-dropdown {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .assign-button {
+    background-color: #31391c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .assign-button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(bg1.jpg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  nav {
+    background-color:rgb(16, 49, 16);
+    padding: 20px;
+    text-align: right;
+    overflow: hidden;
+    height: auto;
+    width: 100%; 
+    position: fixed;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  nav a {
+    color: rgb(228, 211, 211);
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 18px;
+  }
+
+  nav a:hover {
+    background-color: #ddd;
+    color: greenyellow;
+    color: black;
+  }
+ 
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #8fb49a;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+label {
+    display: inline-block;
+    width: 200px; /* Adjust the width as needed */
+    text-align: left;
+    margin-right: 10px; /* Adjust the margin as needed */
+    color: #333;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    margin-top: 8px;
+}
+
+input[type="submit"] {
+    background-color: #31391c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.container_input {
+    margin-top: 60px; /* Adjust this value based on your navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}

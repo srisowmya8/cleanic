@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="userprogress.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" />
+  <title>Cleanic Progress Tracker</title>
+  <style>
+    
+    .navbar-logo {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .navbar-logo img {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    nav a {
+        margin-left: 30px;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+        <a href="userrequest.html"><i class="fas fa-envelope"></i> request form</a>
+        <a href="#progress"><i class="fas fa-tasks"></i> progress</a>
+        <a href="userprofile.html"><i class="fas fa-user"></i> profile</a>
+        <a href="loginpage.html">logout</a>
+    </nav>
+    <div id="progress">
+        <div class="progress-tracker-container">
+            <h1 class="progress-tracker-heading">Task Progress Tracker</h1>
+            <div class="progress-form">
+            <div class="progress-entry">
+              <label for="submission-id">Submission ID:</label>
+              <span class="submission-id">1</span>
+            </div>
+        
+            <div class="progress-entry">
+              <label for="accepted">Accepted:</label>
+              <span class="accepted">&#10004;</span>
+            </div>
+        
+            <div class="progress-entry">
+              <label for="worker-name">Worker Name:</label>
+              <span class="worker-name">Worker 1</span>
+            </div>
+        
+            <div class="progress-entry">
+              <label for="phone-number">Phone Number:</label>
+              <span class="phone-number">123-456-7890</span>
+            </div>
+        
+            <div class="progress-entry">
+              <label for="status">Status:</label>
+              <span class="status">In Progress</span>
+            </div>
+        
+            <div class="progress-entry">
+              <button class="complete-button">Task Completed</button>
+            </div>
+        </div>
+          </div>
+    </div>
+  
+</body>
+</html>

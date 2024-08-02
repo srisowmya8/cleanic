@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="volreq.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" />
+
+  <title>Cleanic Requests</title>
+  <style>
+    
+    .navbar-logo {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .navbar-logo img {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    nav a {
+        margin-left: 30px;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+      <a href="homepage.html" class="navbar-logo">
+        <img src="home_icon.jpeg" alt="Logo">
+    </a>
+        <a href="volhomepage.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#requests"><i class="fas fa-envelope"></i> Requests</a>
+        <a href="volprogress.html"><i class="fas fa-tasks"></i> Progress</a>
+        <a href="volprofile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="loginpage.html">Logout</a>
+    </nav>
+
+    <div id="requests">
+        <div class="requests-container">
+            <h1 class="requests-heading">Cleaning Requests</h1>
+            <ul class="requests-list" id="requestsList">
+                <li class="request-item" id="requestItem1">
+                    <span class="request-details">Area: Park | Issue: Clean drainage</span>
+                    <div class="request-actions">
+                        <button class="accept-button" onclick="acceptRequest('requestItem1')">Accept</button>
+                        <button class="reject-button" onclick="rejectRequest('requestItem1')">Reject</button>
+                    </div>
+                </li>
+                <li class="request-item" id="requestItem1">
+                    <span class="request-details">Area: Ramalayam | Issue: Remove Garbage</span>
+                    <div class="request-actions">
+                        <button class="accept-button" onclick="acceptRequest('requestItem1')">Accept</button>
+                        <button class="reject-button" onclick="rejectRequest('requestItem1')">Reject</button>
+                    </div>
+                </li>
+                <li class="request-item" id="requestItem1">
+                    <span class="request-details">Area: RoadNo-10| Issue: Clean up the road side trash</span>
+                    <div class="request-actions">
+                        <button class="accept-button" onclick="acceptRequest('requestItem1')">Accept</button>
+                        <button class="reject-button" onclick="rejectRequest('requestItem1')">Reject</button>
+                    </div>
+                </li>
+                <li class="request-item" id="requestItem1">
+                    <span class="request-details">Area: RoadNo-9| Issue: Sanitaion </span>
+                    <div class="request-actions">
+                        <button class="accept-button" onclick="acceptRequest('requestItem1')">Accept</button>
+                        <button class="reject-button" onclick="rejectRequest('requestItem1')">Reject</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function acceptRequest(requestItemId) {
+            alert('Request Accepted');
+            // Remove the corresponding request item from the DOM
+            var requestItem = document.getElementById(requestItemId);
+            if (requestItem) {
+                requestItem.remove();
+            }
+            // You can perform additional actions here, such as updating the UI or sending a request to the server.
+        }
+
+        function rejectRequest(requestItemId) {
+            alert('Request Rejected');
+            // Remove the corresponding request item from the DOM
+            var requestItem = document.getElementById(requestItemId);
+            if (requestItem) {
+                requestItem.remove();
+            }
+            // You can perform additional actions here, such as updating the UI or sending a request to the server.
+        }
+    </script>
+</body>
+</html>

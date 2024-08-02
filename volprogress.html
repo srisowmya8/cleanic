@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="volprogress.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" />
+
+  <title>Cleanic Progress</title>
+  <style>
+    
+    .navbar-logo {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .navbar-logo img {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    nav a {
+        margin-left: 30px;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+      <a href="homepage.html" class="navbar-logo">
+        <img src="home_icon.jpeg" alt="Logo">
+    </a>
+        <a href="volhomepage.html"><i class="fas fa-home"></i> Home</a>
+        <a href="volreq.html"><i class="fas fa-envelope"></i> Requests</a>
+        <a href="#progress"><i class="fas fa-tasks"></i> progress</a>
+        <a href="volprofile.html"><i class="fas fa-user"></i> profile</a>
+        <a href="loginpage.html">logout</a>
+    </nav>
+    <div class="container">
+  <div class="progress-container">
+    <h1 class="progress-heading">Assign Work Progress</h1>
+    <div class="progress-form">
+      <div class="progress-item">
+        <label for="submission-id">Submission ID:</label>
+        <input type="text" id="submission-id" name="submission-id" >
+      </div>
+<div id="progress">
+    <div class="progress-item">
+        <label for="worker-dropdown">Assign Work To:</label>
+        <select id="worker-dropdown" name="worker-dropdown" class="worker-dropdown">
+          <option value="worker1">ramaiah</option>
+          <option value="worker2">chandraya</option>
+          <!-- Add more workers as needed -->
+        </select>
+      </div>
+
+      <div class="progress-item">
+        <label for="phone-number">Phone Number:</label>
+        <input type="number" id="phone-number" name="phone-number" >
+      </div>
+
+      <div class="progress-item">
+        <button class="assign-button">Assign</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      
+</body>
+</html>

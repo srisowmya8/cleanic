@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="userrequest.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" />
+        <style>
+    
+            .navbar-logo {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 50px;
+                max-height: 50px;
+            }
+    
+            .navbar-logo img {
+                width: 100%;
+                height: auto;
+            }
+            
+    
+            nav a {
+                margin-left: 30px;
+            }
+            </style>
+    </head>
+
+<body>
+
+    <nav>
+        <a href="homepage.html" class="navbar-logo">
+            <img src="home_icon.jpeg" alt="Logo">
+        </a>
+        <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+        <a href="#request"><i class="fas fa-envelope"></i> request form</a>
+        <a href="userprogress.html"><i class="fas fa-tasks"></i> progress</a>
+        <a href="userprofile.html"><i class="fas fa-user"></i> profile</a>
+        <a href="loginpage.html">logout</a>
+
+    </nav>
+    <div class="container_input">
+        <div id="request">
+            <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea><br>
+
+                <label for="issue">Issue:</label>
+                <input type="text" id="issue" name="issue" required><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+
+                <label for="picture">Upload Picture:</label>
+                <input type="file" id="picture" name="picture" accept="image/*" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
